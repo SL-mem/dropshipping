@@ -63,6 +63,16 @@
     $("#shopTitle").textContent = `The ${season.label} Edit`;
     $("#shopSub").textContent = `${seasonProducts().length} pieces picked for ${season.label.toLowerCase()}.`;
     $("#year").textContent = new Date().getFullYear();
+    const legal = STORE.legal;
+    $("#legalInfo").textContent = [
+      legal.businessName,
+      legal.address,
+      `Enterprise no. ${legal.enterpriseNumber}`,
+      `VAT ${legal.vatNumber}`,
+      legal.email,
+      legal.phone,
+    ].join(" · ");
+    if (legal.vatExempt) $("#vatNote").textContent = "Small business exempt from VAT (vrijstellingsregeling kleine ondernemingen). Prices include no VAT.";
 
     if (ACTIVE_SEASON === "winter") makeSnow();
   }
@@ -140,7 +150,6 @@
     const sort = $("#sortSelect").value;
     if (sort === "price-asc") list = [...list].sort((a, b) => a.price - b.price);
     if (sort === "price-desc") list = [...list].sort((a, b) => b.price - a.price);
-    if (sort === "rating") list = [...list].sort((a, b) => b.rating - a.rating);
 
     $("#productGrid").innerHTML = list
       .map(
@@ -153,7 +162,7 @@
           <div class="product-info">
             <div class="swatches">${p.colors.map((c) => `<span style="background:${c}"></span>`).join("")}</div>
             <h3>${p.name}</h3>
-            <div class="rating">${stars(p.rating)}<span class="muted small">${p.rating} (${p.reviews})</span></div>
+            ${p.rating ? `<div class="rating">${stars(p.rating)}<span class="muted small">${p.rating} (${p.reviews})</span></div>` : ""}
             <div class="price-row">
               <span class="price">${money(p.price)}</span>
               ${p.compareAt ? `<span class="compare">${money(p.compareAt)}</span>` : ""}
@@ -176,7 +185,7 @@
       <div class="qv-info">
         <p class="eyebrow dark">${CATEGORY_LABELS[p.category]}</p>
         <h2>${p.name}</h2>
-        <div class="rating">${stars(p.rating)}<span class="muted small">${p.rating} · ${p.reviews} reviews</span></div>
+        ${p.rating ? `<div class="rating">${stars(p.rating)}<span class="muted small">${p.rating} · ${p.reviews} reviews</span></div>` : ""}
         <div class="price-row big">
           <span class="price">${money(p.price)}</span>
           ${p.compareAt ? `<span class="compare">${money(p.compareAt)}</span>` : ""}
@@ -191,7 +200,7 @@
           .map((s) => `<button class="size-opt ${s === size ? "active" : ""}" data-size="${s}">${s}</button>`)
           .join("")}</div>
         <button class="btn btn-accent btn-block" id="qvAdd">Add to cart · ${money(p.price)}</button>
-        <p class="muted small">Free returns within 30 days.</p>
+        <p class="muted small">Returns accepted within 14 days of delivery.</p>
       </div>`;
 
     const body = $("#qvBody");
@@ -384,8 +393,17 @@
 
     $("#newsletterForm").addEventListener("submit", (e) => {
       e.preventDefault();
-      e.target.reset();
-      toast("Thanks! Your 10% code is on its way.");
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(e.target)).toString(),
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error();
+          e.target.reset();
+          toast("Thanks! You're on the list.");
+        })
+        .catch(() => toast("Sign-up failed. Please try again later."));
     });
   }
 

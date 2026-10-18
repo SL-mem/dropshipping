@@ -2,6 +2,9 @@
  * Product catalog.
  *
  * `shape` optionally overrides which illustration is drawn.
+ * Only add `compareAt` (a "was" price) if that was really the lowest price
+ * charged in the 30 days before the discount, and only add `rating` /
+ * `reviews` from genuine customer reviews (EU consumer law).
  * `seasons` lists every season a product belongs to, so year-round basics can
  * appear in several collections. `category` picks the illustration and filter.
  */
@@ -12,12 +15,8 @@ const PRODUCTS = [
     category: "outerwear",
     seasons: ["winter"],
     price: 189,
-    compareAt: 239,
     colors: ["#1f2a36", "#6b4f3a", "#8c9aa6"],
     sizes: ["XS", "S", "M", "L", "XL"],
-    badge: "Bestseller",
-    rating: 4.8,
-    reviews: 312,
     description: "700-fill down, water-resistant shell and a fleece-lined hood rated to -25°C.",
   },
   {
@@ -29,8 +28,6 @@ const PRODUCTS = [
     colors: ["#2f5d8a", "#111111", "#a33b3b"],
     sizes: ["XS", "S", "M", "L", "XL"],
     badge: "New",
-    rating: 4.6,
-    reviews: 128,
     description: "Packs into its own pocket. Recycled synthetic fill stays warm when wet.",
   },
   {
@@ -41,8 +38,6 @@ const PRODUCTS = [
     price: 169,
     colors: ["#3b3b3b", "#7a6a55"],
     sizes: ["S", "M", "L", "XL"],
-    rating: 4.7,
-    reviews: 87,
     description: "Italian wool blend with a satin lining. Sharp enough for the office.",
   },
   {
@@ -51,12 +46,8 @@ const PRODUCTS = [
     category: "knitwear",
     seasons: ["winter", "fall"],
     price: 69,
-    compareAt: 89,
     colors: ["#e8e0d0", "#5b6b4a", "#7a2e2e"],
     sizes: ["XS", "S", "M", "L", "XL"],
-    badge: "Sale",
-    rating: 4.9,
-    reviews: 451,
     description: "Heavyweight lambswool-blend knit with a relaxed, cozy fit.",
   },
   {
@@ -67,8 +58,6 @@ const PRODUCTS = [
     price: 59,
     colors: ["#111111", "#d8cbb5", "#3c4f63"],
     sizes: ["XS", "S", "M", "L", "XL"],
-    rating: 4.5,
-    reviews: 203,
     description: "Fine-gauge extra-fine merino. Itch-free, temperature regulating.",
   },
   {
@@ -79,8 +68,6 @@ const PRODUCTS = [
     price: 54,
     colors: ["#efe9df", "#4a5a3c"],
     sizes: ["S", "M", "L", "XL"],
-    rating: 4.6,
-    reviews: 176,
     description: "Plush high-pile fleece with a quarter zip and kangaroo pocket.",
   },
   {
@@ -91,9 +78,6 @@ const PRODUCTS = [
     price: 24,
     colors: ["#a33b3b", "#1f2a36", "#cfc6b8"],
     sizes: ["One size"],
-    badge: "Bestseller",
-    rating: 4.8,
-    reviews: 529,
     description: "Soft, stretchy rib with a fold-over cuff. Fits every head.",
   },
   {
@@ -105,8 +89,6 @@ const PRODUCTS = [
     price: 32,
     colors: ["#7a2e2e", "#2f5d8a"],
     sizes: ["One size"],
-    rating: 4.7,
-    reviews: 244,
     description: "Brushed for softness, generous enough to wear as a wrap.",
   },
   {
@@ -118,8 +100,6 @@ const PRODUCTS = [
     price: 22,
     colors: ["#111111", "#5a5a5a"],
     sizes: ["S/M", "L/XL"],
-    rating: 4.4,
-    reviews: 318,
     description: "Thinsulate lining with conductive fingertips. Text without freezing.",
   },
   {
@@ -128,12 +108,8 @@ const PRODUCTS = [
     category: "footwear",
     seasons: ["winter"],
     price: 99,
-    compareAt: 129,
     colors: ["#5a3e2b", "#111111"],
     sizes: ["6", "7", "8", "9", "10", "11", "12"],
-    badge: "Sale",
-    rating: 4.7,
-    reviews: 198,
     description: "Seam-sealed leather upper, faux-fur lining and grippy lugged soles.",
   },
   {
@@ -145,8 +121,6 @@ const PRODUCTS = [
     price: 28,
     colors: ["#5b6b4a", "#7a6a55", "#3c4f63"],
     sizes: ["S", "M", "L"],
-    rating: 4.8,
-    reviews: 602,
     description: "Cushioned, odor-resistant and warm. Three pairs in earthy tones.",
   },
   {
@@ -158,8 +132,6 @@ const PRODUCTS = [
     colors: ["#111111", "#3c4f63"],
     sizes: ["XS", "S", "M", "L", "XL"],
     badge: "New",
-    rating: 4.6,
-    reviews: 141,
     description: "Brushed-back top and leggings that trap heat without the bulk.",
   },
   {
@@ -170,8 +142,6 @@ const PRODUCTS = [
     price: 26,
     colors: ["#ffffff", "#111111", "#8c9aa6"],
     sizes: ["XS", "S", "M", "L", "XL"],
-    rating: 4.5,
-    reviews: 890,
     description: "Our year-round staple. 240gsm organic cotton, built to layer.",
   },
 ];

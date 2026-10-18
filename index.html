@@ -67,7 +67,6 @@
               <option value="featured">Featured</option>
               <option value="price-asc">Price: low to high</option>
               <option value="price-desc">Price: high to low</option>
-              <option value="rating">Top rated</option>
             </select>
           </label>
         </div>
@@ -84,8 +83,8 @@
         </div>
         <div class="why-item">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.3-5.6M4 4v4h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <h3>30-day free returns</h3>
-          <p>Not warm enough? Send it back, no questions asked.</p>
+          <h3>14-day returns</h3>
+          <p>Changed your mind? Send it back within 14 days of delivery for a refund.</p>
         </div>
         <div class="why-item">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6l-8-3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -112,7 +111,7 @@
       </details>
       <details>
         <summary>What is your return policy?</summary>
-        <p>You can return unworn items with tags attached within 30 days of delivery for a full refund.</p>
+        <p>You can return unworn items with tags attached within 14 days of delivery for a full refund of the item price. Return shipping is paid by you unless the item is faulty or wrong.</p>
       </details>
       <details>
         <summary>Will you sell more than winter clothes?</summary>
@@ -123,12 +122,13 @@
     <section class="newsletter">
       <div class="container newsletter-inner">
         <div>
-          <h2>Get 10% off your first order</h2>
-          <p>Plus early access to each new seasonal drop.</p>
+          <h2>Hear about new drops first</h2>
+          <p>One email when each seasonal collection lands. No spam.</p>
         </div>
-        <form id="newsletterForm" class="newsletter-form">
+        <form id="newsletterForm" class="newsletter-form" name="newsletter" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="newsletter" />
           <label class="visually-hidden" for="email">Email address</label>
-          <input id="email" type="email" placeholder="you@example.com" required />
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
           <button class="btn btn-accent" type="submit">Subscribe</button>
         </form>
       </div>
@@ -155,10 +155,14 @@
       <div>
         <h4>Company</h4>
         <a href="#why">About</a>
-        <a href="mailto:hello@example.com">Contact</a>
+        <a href="#faq">Contact</a>
       </div>
     </div>
-    <div class="container footer-bottom muted">© <span id="year"></span> Fourfold. All rights reserved.</div>
+    <div class="container footer-bottom muted">
+      <p class="legal-info" id="legalInfo"></p>
+      <p class="legal-info" id="vatNote"></p>
+      <p>© <span id="year"></span> Fourfold. All rights reserved.</p>
+    </div>
   </footer>
 
   <!-- Cart drawer -->

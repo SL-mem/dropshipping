@@ -13,6 +13,17 @@ const STORE = {
   freeShippingThreshold: 50,
   shippingFee: 4.95,
   shipTo: ["NL", "BE"],
+  // Required on every page by Belgian law (Code of Economic Law, Book XII).
+  // Replace every placeholder before going live.
+  legal: {
+    businessName: "Fourfold — [your full name]",
+    address: "[street + number, postcode + town, Belgium]",
+    enterpriseNumber: "[0xxx.xxx.xxx]",
+    vatNumber: "[BE0xxx.xxx.xxx]",
+    email: "[contact email]",
+    phone: "[phone number]",
+    vatExempt: true,
+  },
 };
 
 const ACTIVE_SEASON = "winter";
@@ -28,7 +39,7 @@ const SEASONS = {
     headline: "Built for the cold. Made to be worn.",
     copy: "Insulated coats, chunky knits and the accessories that get you through the darkest months — shipped fast from EU warehouses.",
     cta: "Shop winter",
-    announcement: "Free shipping over €50 · Fast delivery from EU warehouses · 30-day free returns",
+    announcement: "Free shipping over €50 · Fast delivery from EU warehouses · 14-day returns",
     theme: { accent: "#2f5d8a", accentSoft: "#e3edf6", hero1: "#0f2236", hero2: "#2f5d8a" },
   },
   spring: {

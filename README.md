@@ -39,5 +39,8 @@ The checkout button only works on Netlify (or `netlify dev`), not with a plain s
 
 ## Next steps
 
-- **Newsletter:** the form only shows a confirmation. Point it at your email provider.
+- **Legal details:** fill in `STORE.legal` in `js/config.js` (name, address, enterprise and VAT number, email, phone). Belgian law requires them on every page; the footer shows them.
+- **Reviews and "was" prices:** add `rating`/`reviews` only from real customer reviews, and `compareAt` only if it was really the lowest price in the previous 30 days.
+- **Newsletter:** sign-ups are stored by Netlify Forms once the site is deployed on Netlify.
+
 - **Product photos:** cards use built-in SVG illustrations. Replace them with real images from your supplier.
