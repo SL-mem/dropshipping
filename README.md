@@ -19,6 +19,8 @@ python3 -m http.server 8000
 | `js/app.js` | Rendering, filtering/sorting, quick view, a cart saved in `localStorage`, and the checkout redirect |
 | `netlify/functions/create-checkout.js` | Prices the cart from `js/products.js` and creates a Stripe Checkout session (iDEAL, Bancontact, cards, wallets) |
 | `netlify.toml` | Netlify build settings |
+| `terms.html`, `returns.html`, `shipping.html`, `privacy.html`, `contact.html` | Legal pages (Belgian/EU consumer law, GDPR) |
+| `js/legal.js` | Fills business details from `STORE.legal` into the footer and legal pages |
 
 ## Switching seasons
 
@@ -39,7 +41,8 @@ The checkout button only works on Netlify (or `netlify dev`), not with a plain s
 
 ## Next steps
 
-- **Legal details:** fill in `STORE.legal` in `js/config.js` (name, address, enterprise and VAT number, email, phone). Belgian law requires them on every page; the footer shows them.
+- **Legal details:** fill in `STORE.legal` in `js/config.js` (name, address, enterprise and VAT number, email, phone). Belgian law requires them on every page; the footer and legal pages show them. Have the legal pages checked, and translated into Dutch and French, before launch.
+- **Product facts:** add `material`, `care` and, unless sold under your own label, `manufacturer` / `euResponsible` to each product in `js/products.js`.
 - **Reviews and "was" prices:** add `rating`/`reviews` only from real customer reviews, and `compareAt` only if it was really the lowest price in the previous 30 days.
 - **Newsletter:** sign-ups are stored by Netlify Forms once the site is deployed on Netlify.
 

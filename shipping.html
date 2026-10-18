@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shipping — Fourfold</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Crect width='10' height='10' rx='3' fill='%232f5d8a'/%3E%3Crect x='12' width='10' height='10' rx='3' fill='%234f8a4a'/%3E%3Crect y='12' width='10' height='10' rx='3' fill='%239a4a2a'/%3E%3Crect x='12' y='12' width='10' height='10' rx='3' fill='%23c27a1a'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Fourfold home">
+        <span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span class="logo-text">Fourfold</span>
+      </a>
+      <a href="index.html" class="back-link">← Back to the shop</a>
+    </div>
+  </header>
+
+  <main class="container legal-page">
+    <h1>Shipping</h1>
+    <p class="lead">We ship to Belgium and the Netherlands from warehouses inside the EU, so there are no customs fees.</p>
+
+    <table class="info-table">
+      <tr><th>Countries</th><td>Belgium, the Netherlands</td></tr>
+      <tr><th>Cost</th><td><span data-store="shippingFee"></span> per order, free from <span data-store="freeShippingThreshold"></span></td></tr>
+      <tr><th>Delivery time</th><td>Usually 2 to 6 business days after payment</td></tr>
+      <tr><th>Tracking</th><td>You receive a tracking link by email once your order ships</td></tr>
+      <tr><th>Customs and import fees</th><td>None: all orders ship from within the EU</td></tr>
+    </table>
+
+    <h2>Good to know</h2>
+    <ul>
+      <li>If you order several items, they may arrive in separate parcels. You never pay extra for that.</li>
+      <li>Delivery times are estimates. Around Black Friday and the December holidays they can be a few days longer.</li>
+      <li>If your parcel has not arrived after 10 business days, or tracking has not changed for 5 days, email us at <span data-legal="email"></span> and we will look into it.</li>
+      <li>Check your address on the payment page carefully. If a parcel is returned because of a wrong address, we can re-send it at cost.</li>
+    </ul>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container legal-nav">
+      <a href="terms.html">Terms &amp; conditions</a>
+      <a href="returns.html">Returns &amp; withdrawal</a>
+      <a href="shipping.html">Shipping</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="container footer-bottom muted">
+      <p class="legal-info" id="legalInfo"></p>
+      <p class="legal-info" id="vatNote"></p>
+      <p>© <span id="year"></span> Fourfold. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/legal.js"></script>
+</body>
+</html>

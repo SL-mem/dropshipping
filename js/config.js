@@ -23,6 +23,7 @@ const STORE = {
     email: "[contact email]",
     phone: "[phone number]",
     vatExempt: true,
+    termsUpdated: "18 October 2026",
   },
 };
 

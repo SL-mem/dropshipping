@@ -269,6 +269,30 @@ button { font: inherit; cursor: pointer; }
 .footer-bottom p { margin: 0 0 6px; }
 .footer-bottom { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 0.85rem; }
 
+/* ---------- Legal pages ---------- */
+.back-link { color: var(--muted); text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+.back-link:hover { color: var(--ink); }
+.legal-page { max-width: 780px; padding: 48px 0 72px; }
+.legal-page h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(2rem, 4vw, 2.6rem); margin: 0 0 12px; }
+.legal-page h2 { font-size: 1.15rem; margin: 32px 0 8px; }
+.legal-page .lead { color: var(--muted); font-size: 1.05rem; }
+.legal-page a { color: var(--accent); }
+.legal-page li { margin-bottom: 6px; }
+.info-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.95rem; }
+.info-table th, .info-table td { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--line); }
+.info-table th { font-weight: 600; white-space: nowrap; }
+.form-box { border: 1px dashed var(--line); border-radius: var(--radius); padding: 8px 20px; background: var(--card); }
+.legal-nav { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+.legal-nav a { color: var(--muted); text-decoration: none; font-size: 0.92rem; }
+.legal-nav a:hover { color: var(--ink); }
+.product-facts { display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; font-size: 0.85rem; margin: 0 0 4px; }
+.product-facts dt { font-weight: 600; }
+.product-facts dd { margin: 0; color: var(--muted); }
+@media (max-width: 600px) {
+  .info-table, .info-table tbody, .info-table tr, .info-table th, .info-table td { display: block; }
+  .info-table th { border-bottom: 0; padding-bottom: 0; }
+}
+
 /* ---------- Cart drawer ---------- */
 .overlay { position: fixed; inset: 0; background: rgba(10, 14, 20, 0.45); z-index: 50; }
 .cart-drawer {

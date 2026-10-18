@@ -62,18 +62,6 @@
     $("#heroCta").textContent = season.cta;
     $("#shopTitle").textContent = `The ${season.label} Edit`;
     $("#shopSub").textContent = `${seasonProducts().length} pieces picked for ${season.label.toLowerCase()}.`;
-    $("#year").textContent = new Date().getFullYear();
-    const legal = STORE.legal;
-    $("#legalInfo").textContent = [
-      legal.businessName,
-      legal.address,
-      `Enterprise no. ${legal.enterpriseNumber}`,
-      `VAT ${legal.vatNumber}`,
-      legal.email,
-      legal.phone,
-    ].join(" · ");
-    if (legal.vatExempt) $("#vatNote").textContent = "Small business exempt from VAT (vrijstellingsregeling kleine ondernemingen). Prices include no VAT.";
-
     if (ACTIVE_SEASON === "winter") makeSnow();
   }
 
@@ -191,6 +179,12 @@
           ${p.compareAt ? `<span class="compare">${money(p.compareAt)}</span>` : ""}
         </div>
         <p>${p.description}</p>
+        <dl class="product-facts">
+          <dt>Material</dt><dd>${p.material || "[fibre content from the label]"}</dd>
+          <dt>Care</dt><dd>${p.care || "[washing instructions from the label]"}</dd>
+          <dt>Manufacturer</dt><dd>${p.manufacturer || `${STORE.legal.businessName}, ${STORE.legal.address}, ${STORE.legal.email}`}</dd>
+          ${p.euResponsible ? `<dt>EU responsible person</dt><dd>${p.euResponsible}</dd>` : ""}
+        </dl>
         <div class="option-label">Color</div>
         <div class="color-options">${p.colors
           .map((c, i) => `<button class="color-opt ${i === 0 ? "active" : ""}" style="background:${c}" data-color="${c}" aria-label="Color ${i + 1}"></button>`)

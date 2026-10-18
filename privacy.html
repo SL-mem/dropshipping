@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy policy — Fourfold</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Crect width='10' height='10' rx='3' fill='%232f5d8a'/%3E%3Crect x='12' width='10' height='10' rx='3' fill='%234f8a4a'/%3E%3Crect y='12' width='10' height='10' rx='3' fill='%239a4a2a'/%3E%3Crect x='12' y='12' width='10' height='10' rx='3' fill='%23c27a1a'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Fourfold home">
+        <span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span class="logo-text">Fourfold</span>
+      </a>
+      <a href="index.html" class="back-link">← Back to the shop</a>
+    </div>
+  </header>
+
+  <main class="container legal-page">
+    <h1>Privacy policy</h1>
+    <p class="lead">This policy explains what personal data we collect, why, and what your rights are under the GDPR. Last updated: <span data-store="updated"></span>.</p>
+
+    <h2>Who is responsible for your data</h2>
+    <p>The controller is <span data-legal="businessName"></span>, <span data-legal="address"></span>, enterprise number <span data-legal="enterpriseNumber"></span>, VAT number <span data-legal="vatNumber"></span>, email <span data-legal="email"></span>, phone <span data-legal="phone"></span>.</p>
+
+    <h2>What we collect and why</h2>
+    <table class="info-table">
+      <tr><th>Data</th><th>Why</th><th>Legal basis</th><th>How long we keep it</th></tr>
+      <tr><td>Name, delivery address, email, phone, order details</td><td>To process, deliver and support your order</td><td>Performance of the contract</td><td>10 years (Belgian accounting obligations)</td></tr>
+      <tr><td>Payment data</td><td>To take payment; handled by Stripe, we never see your full card details</td><td>Performance of the contract</td><td>As required by Stripe and accounting law</td></tr>
+      <tr><td>Email address (newsletter)</td><td>To tell you about new collections</td><td>Your consent</td><td>Until you unsubscribe</td></tr>
+      <tr><td>Emails you send us</td><td>To answer your questions and complaints</td><td>Our legitimate interest in helping you</td><td>Up to 2 years after the last contact</td></tr>
+    </table>
+
+    <h2>Who we share it with</h2>
+    <ul>
+      <li><strong>Stripe</strong> (payments).</li>
+      <li><strong>Netlify</strong> (website hosting and newsletter sign-ups).</li>
+      <li><strong>Our fulfilment partner</strong>, which packs and ships your order and receives your name, delivery address and phone number for that purpose only. Some of these providers are based outside the European Economic Area; transfers are covered by the European Commission's standard contractual clauses or another legal safeguard.</li>
+      <li>Delivery companies, to deliver your parcel.</li>
+    </ul>
+    <p>We never sell your data.</p>
+
+    <h2>Cookies and storage</h2>
+    <p>We do not use tracking or advertising cookies. Your shopping cart is saved in your own browser (local storage) so it is still there when you come back; it never leaves your device until you check out. Stripe uses cookies that are needed for secure payment and fraud prevention on its payment page.</p>
+
+    <h2>Your rights</h2>
+    <p>You can ask to see, correct or delete your data, to restrict or object to its use, and to receive it in a portable format. You can withdraw your newsletter consent at any time. Email <span data-legal="email"></span>; we answer within one month.</p>
+    <p>If you are not satisfied, you can complain to the Belgian Data Protection Authority (Gegevensbeschermingsautoriteit / Autorité de protection des données) at <a href="https://www.dataprotectionauthority.be" rel="noopener">dataprotectionauthority.be</a>.</p>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container legal-nav">
+      <a href="terms.html">Terms &amp; conditions</a>
+      <a href="returns.html">Returns &amp; withdrawal</a>
+      <a href="shipping.html">Shipping</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="container footer-bottom muted">
+      <p class="legal-info" id="legalInfo"></p>
+      <p class="legal-info" id="vatNote"></p>
+      <p>© <span id="year"></span> Fourfold. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/legal.js"></script>
+</body>
+</html>

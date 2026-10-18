@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms and conditions — Fourfold</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Crect width='10' height='10' rx='3' fill='%232f5d8a'/%3E%3Crect x='12' width='10' height='10' rx='3' fill='%234f8a4a'/%3E%3Crect y='12' width='10' height='10' rx='3' fill='%239a4a2a'/%3E%3Crect x='12' y='12' width='10' height='10' rx='3' fill='%23c27a1a'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Fourfold home">
+        <span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span class="logo-text">Fourfold</span>
+      </a>
+      <a href="index.html" class="back-link">← Back to the shop</a>
+    </div>
+  </header>
+
+  <main class="container legal-page">
+    <h1>Terms and conditions</h1>
+    <p class="lead">These terms apply to every order placed on this website by a consumer. Last updated: <span data-store="updated"></span>.</p>
+
+    <h2>1. Who we are</h2>
+    <p>This shop is run by <span data-legal="businessName"></span>, <span data-legal="address"></span>, enterprise number <span data-legal="enterpriseNumber"></span>, VAT number <span data-legal="vatNumber"></span>, email <span data-legal="email"></span>, phone <span data-legal="phone"></span>.</p>
+
+    <h2>2. Products and prices</h2>
+    <p>We describe and photograph our products as accurately as we can. Colours on screen can differ slightly from the real item. Each product page shows its material, size table and safety information.</p>
+    <p>Prices are in euros. <span data-vat-text></span> Delivery costs are shown in the cart and on the payment page before you pay: <span data-store="shippingFee"></span> per order, free for orders of <span data-store="freeShippingThreshold"></span> or more.</p>
+
+    <h2>3. Your order and the contract</h2>
+    <p>The contract is concluded when your payment is confirmed. You receive a confirmation and receipt by email. If an item turns out to be unavailable after you paid, we tell you as soon as possible and refund that item in full within 14 days.</p>
+
+    <h2>4. Payment</h2>
+    <p>Payments are processed by Stripe. You can pay with Bancontact, iDEAL/Wero, credit or debit card and Apple Pay or Google Pay. We never see or store your full card details.</p>
+
+    <h2>5. Delivery</h2>
+    <p>We deliver to Belgium and the Netherlands. Delivery usually takes 2 to 6 business days; see our <a href="shipping.html">shipping page</a>. If we cannot deliver within 30 days of your order, you may cancel the order and receive a full refund. The risk of loss or damage passes to you when you or a person you named receive the parcel.</p>
+
+    <h2>6. Right of withdrawal (14 days)</h2>
+    <p>You can withdraw from your purchase without giving a reason within 14 days of the day you received the goods. How this works, and the model withdrawal form, are on our <a href="returns.html">returns page</a>.</p>
+
+    <h2>7. Legal guarantee</h2>
+    <p>All products come with the legal guarantee of conformity of two years from delivery. If an item is faulty or does not match its description, we repair or replace it, or, if that is not possible, give you a price reduction or a refund. Please tell us within two months of noticing the defect. Normal wear and tear and damage from incorrect use or washing are not covered.</p>
+
+    <h2>8. Liability</h2>
+    <p>Nothing in these terms limits your rights as a consumer under mandatory law.</p>
+
+    <h2>9. Complaints and disputes</h2>
+    <p>Contact us first at <span data-legal="email"></span>; we reply within 2 business days. If we cannot solve the problem together, you can contact the Consumer Mediation Service (Consumentenombudsdienst / Service de Médiation pour le Consommateur) at <a href="https://www.consumentenombudsdienst.be" rel="noopener">consumentenombudsdienst.be</a>.</p>
+
+    <h2>10. Applicable law</h2>
+    <p>These terms are governed by Belgian law. If you live in another EU country, you keep the protection of the mandatory consumer law of that country.</p>
+
+    <h2>11. Personal data</h2>
+    <p>How we use your data is explained in our <a href="privacy.html">privacy policy</a>.</p>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container legal-nav">
+      <a href="terms.html">Terms &amp; conditions</a>
+      <a href="returns.html">Returns &amp; withdrawal</a>
+      <a href="shipping.html">Shipping</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="container footer-bottom muted">
+      <p class="legal-info" id="legalInfo"></p>
+      <p class="legal-info" id="vatNote"></p>
+      <p>© <span id="year"></span> Fourfold. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/legal.js"></script>
+</body>
+</html>

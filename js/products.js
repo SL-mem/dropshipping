@@ -2,6 +2,10 @@
  * Product catalog.
  *
  * `shape` optionally overrides which illustration is drawn.
+ * `material` and `care` come from the sample's label. `manufacturer` (and
+ * `euResponsible` if the manufacturer is outside the EU) is required by the
+ * EU product safety rules; leave it out only for items sold under your own
+ * Fourfold label, where you are the manufacturer and your details are shown.
  * Only add `compareAt` (a "was" price) if that was really the lowest price
  * charged in the 30 days before the discount, and only add `rating` /
  * `reviews` from genuine customer reviews (EU consumer law).
