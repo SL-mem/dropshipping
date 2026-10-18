@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fourfold — Clothing for every season</title>
+  <meta name="description" content="Fourfold is a year-round clothing store. Shop the Winter Edit: coats, knitwear, boots and accessories." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Crect width='10' height='10' rx='3' fill='%232f5d8a'/%3E%3Crect x='12' width='10' height='10' rx='3' fill='%234f8a4a'/%3E%3Crect y='12' width='10' height='10' rx='3' fill='%239a4a2a'/%3E%3Crect x='12' y='12' width='10' height='10' rx='3' fill='%23c27a1a'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="announcement" id="announcement"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="Fourfold home">
+        <span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span class="logo-text">Fourfold</span>
+      </a>
+      <nav class="main-nav" aria-label="Main">
+        <a href="#shop">Shop</a>
+        <a href="#seasons">Seasons</a>
+        <a href="#why">Why Fourfold</a>
+        <a href="#faq">Help</a>
+      </nav>
+      <button class="cart-button" id="cartButton" aria-label="Open cart">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 7a3 3 0 0 1 6 0" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="snow" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow" id="heroEyebrow"></p>
+        <h1 id="heroHeadline"></h1>
+        <p class="hero-copy" id="heroCopy"></p>
+        <div class="hero-actions">
+          <a href="#shop" class="btn btn-light" id="heroCta"></a>
+          <a href="#seasons" class="btn btn-ghost">See all seasons</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seasons container" id="seasons" aria-labelledby="seasonsTitle">
+      <h2 id="seasonsTitle" class="section-title">Four seasons, one wardrobe</h2>
+      <p class="section-sub">We rotate our featured collection with the weather. Year-round basics are always in stock.</p>
+      <div class="season-cards" id="seasonCards"></div>
+    </section>
+
+    <section class="shop container" id="shop" aria-labelledby="shopTitle">
+      <div class="shop-head">
+        <div>
+          <h2 id="shopTitle" class="section-title"></h2>
+          <p class="section-sub" id="shopSub"></p>
+        </div>
+        <div class="shop-controls">
+          <div class="chips" id="categoryChips" role="tablist" aria-label="Filter by category"></div>
+          <label class="sort">
+            <span>Sort</span>
+            <select id="sortSelect">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+              <option value="rating">Top rated</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="why" id="why">
+      <div class="container why-grid">
+        <div class="why-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7" cy="17.5" r="1.8" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="17.5" r="1.8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          <h3>Free shipping over $75</h3>
+          <p>Tracked delivery to your door, usually in 5–9 business days.</p>
+        </div>
+        <div class="why-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.3-5.6M4 4v4h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>30-day free returns</h3>
+          <p>Not warm enough? Send it back, no questions asked.</p>
+        </div>
+        <div class="why-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6l-8-3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Secure checkout</h3>
+          <p>Encrypted payments with all major cards and wallets.</p>
+        </div>
+        <div class="why-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M4 6l16 12M20 6 4 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <h3>Tested for the cold</h3>
+          <p>Every winter piece is chosen for warmth, durability and fit.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq container" id="faq" aria-labelledby="faqTitle">
+      <h2 id="faqTitle" class="section-title">Questions</h2>
+      <details>
+        <summary>How long does shipping take?</summary>
+        <p>Orders are processed within 1–2 business days and typically arrive in 5–9 business days. You'll get a tracking link by email as soon as your order ships.</p>
+      </details>
+      <details>
+        <summary>How do I pick the right size?</summary>
+        <p>Our outerwear is cut to fit over a sweater. If you're between sizes and plan to layer heavily, size up.</p>
+      </details>
+      <details>
+        <summary>What is your return policy?</summary>
+        <p>You can return unworn items with tags attached within 30 days of delivery for a full refund.</p>
+      </details>
+      <details>
+        <summary>Will you sell more than winter clothes?</summary>
+        <p>Yes. Fourfold rotates its featured collection each season — spring, summer and fall collections are on the way. Join the list below to hear first.</p>
+      </details>
+    </section>
+
+    <section class="newsletter">
+      <div class="container newsletter-inner">
+        <div>
+          <h2>Get 10% off your first order</h2>
+          <p>Plus early access to each new seasonal drop.</p>
+        </div>
+        <form id="newsletterForm" class="newsletter-form">
+          <label class="visually-hidden" for="email">Email address</label>
+          <input id="email" type="email" placeholder="you@example.com" required />
+          <button class="btn btn-accent" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a href="#" class="logo logo-footer"><span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="logo-text">Fourfold</span></a>
+        <p class="muted">Clothing for every season.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <a href="#shop">Winter Edit</a>
+        <a href="#seasons">Coming soon</a>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <a href="#faq">Shipping</a>
+        <a href="#faq">Returns</a>
+        <a href="#faq">Sizing</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#why">About</a>
+        <a href="mailto:hello@example.com">Contact</a>
+      </div>
+    </div>
+    <div class="container footer-bottom muted">© <span id="year"></span> Fourfold. All rights reserved.</div>
+  </footer>
+
+  <!-- Cart drawer -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-head">
+      <h2>Your cart</h2>
+      <button class="icon-btn" id="cartClose" aria-label="Close cart">✕</button>
+    </div>
+    <div class="shipping-progress" id="shippingProgress"></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot">
+      <div class="cart-total"><span>Subtotal</span><strong id="cartSubtotal">$0.00</strong></div>
+      <button class="btn btn-accent btn-block" id="checkoutBtn">Checkout</button>
+      <p class="muted small">Taxes and shipping calculated at checkout.</p>
+    </div>
+  </aside>
+
+  <!-- Product quick view -->
+  <dialog class="quick-view" id="quickView">
+    <button class="icon-btn qv-close" id="qvClose" aria-label="Close">✕</button>
+    <div class="qv-body" id="qvBody"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
