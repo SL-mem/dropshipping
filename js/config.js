@@ -11,9 +11,14 @@ const STORE = {
   currency: "EUR",
   locale: "en-IE",
   freeShippingThreshold: 50,
+  shippingFee: 4.95,
+  shipTo: ["NL", "BE"],
 };
 
 const ACTIVE_SEASON = "winter";
+
+// Shared with the checkout function, which reads the shipping settings.
+if (typeof module !== "undefined") module.exports = { STORE };
 
 const SEASONS = {
   winter: {
@@ -21,7 +26,7 @@ const SEASONS = {
     status: "live",
     eyebrow: "The Winter Edit · 2026",
     headline: "Built for the cold. Made to be worn.",
-    copy: "Insulated coats, chunky knits, heaters and hand warmers — everything that gets you through the darkest months, shipped fast from EU warehouses.",
+    copy: "Insulated coats, chunky knits and the accessories that get you through the darkest months — shipped fast from EU warehouses.",
     cta: "Shop winter",
     announcement: "Free shipping over €50 · Fast delivery from EU warehouses · 30-day free returns",
     theme: { accent: "#2f5d8a", accentSoft: "#e3edf6", hero1: "#0f2236", hero2: "#2f5d8a" },
