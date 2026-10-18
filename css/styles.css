@@ -272,7 +272,12 @@ button { font: inherit; cursor: pointer; }
 /* ---------- Legal pages ---------- */
 .back-link { color: var(--muted); text-decoration: none; font-weight: 500; font-size: 0.95rem; }
 .back-link:hover { color: var(--ink); }
-.legal-page { max-width: 780px; padding: 48px 0 72px; }
+.legal-page { max-width: 780px; padding: 32px 0 72px; }
+.legal-page .back-link { display: inline-block; margin-bottom: 20px; }
+.lang-switch { display: flex; gap: 4px; }
+.lang-switch a { text-decoration: none; font-size: 0.85rem; font-weight: 600; color: var(--muted); padding: 6px 10px; border-radius: 999px; }
+.lang-switch a:hover { color: var(--ink); }
+.lang-switch a[aria-current="page"] { background: var(--ink); color: #fff; }
 .legal-page h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(2rem, 4vw, 2.6rem); margin: 0 0 12px; }
 .legal-page h2 { font-size: 1.15rem; margin: 32px 0 8px; }
 .legal-page .lead { color: var(--muted); font-size: 1.05rem; }

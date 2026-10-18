@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Politique de confidentialité — Fourfold</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Crect width='10' height='10' rx='3' fill='%232f5d8a'/%3E%3Crect x='12' width='10' height='10' rx='3' fill='%234f8a4a'/%3E%3Crect y='12' width='10' height='10' rx='3' fill='%239a4a2a'/%3E%3Crect x='12' y='12' width='10' height='10' rx='3' fill='%23c27a1a'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo" aria-label="Fourfold home">
+        <span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span class="logo-text">Fourfold</span>
+      </a>
+      <nav class="lang-switch" aria-label="Language"><a href="../privacy.html" hreflang="en">EN</a> <a href="../nl/privacy.html" hreflang="nl">NL</a> <a href="privacy.html" hreflang="fr" aria-current="page">FR</a></nav>
+    </div>
+  </header>
+
+  <main class="container legal-page">
+    <a href="../index.html" class="back-link">← Retour à la boutique</a>
+    <h1>Politique de confidentialité</h1>
+    <p class="lead">Cette politique explique quelles données personnelles nous collectons, pourquoi, et quels sont vos droits selon le RGPD. Dernière mise à jour : <span data-store="updated"></span>.</p>
+
+    <h2>Qui est responsable de vos données</h2>
+    <p>Le responsable du traitement est <span data-legal="businessName"></span>, <span data-legal="address"></span>, numéro d'entreprise <span data-legal="enterpriseNumber"></span>, numéro de TVA <span data-legal="vatNumber"></span>, e-mail <span data-legal="email"></span>, téléphone <span data-legal="phone"></span>.</p>
+    <h2>Ce que nous collectons et pourquoi</h2>
+    <table class="info-table">
+      <tr><th>Données</th><th>Pourquoi</th><th>Base légale</th><th>Durée de conservation</th></tr>
+      <tr><td>Nom, adresse de livraison, e-mail, téléphone, détails de commande</td><td>Traiter, livrer et suivre votre commande</td><td>Exécution du contrat</td><td>10 ans (obligations comptables belges)</td></tr>
+      <tr><td>Données de paiement</td><td>Encaisser le paiement ; traité par Stripe, nous ne voyons jamais vos données de carte complètes</td><td>Exécution du contrat</td><td>Selon les exigences de Stripe et du droit comptable</td></tr>
+      <tr><td>Adresse e-mail (newsletter)</td><td>Vous informer des nouvelles collections</td><td>Votre consentement</td><td>Jusqu’à votre désinscription</td></tr>
+      <tr><td>E-mails que vous nous envoyez</td><td>Répondre à vos questions et réclamations</td><td>Notre intérêt légitime à vous aider</td><td>Jusqu’à 2 ans après le dernier contact</td></tr>
+    </table>
+    <h2>Avec qui nous les partageons</h2>
+    <ul>
+      <li><strong>Stripe</strong> (paiements).</li>
+      <li><strong>Netlify</strong> (hébergement du site et inscriptions à la newsletter).</li>
+      <li><strong>Notre partenaire logistique</strong>, qui prépare et expédie votre commande et reçoit uniquement à cette fin votre nom, adresse de livraison et numéro de téléphone.</li>
+      <li>Les transporteurs, pour livrer votre colis.</li>
+    </ul>
+    <p>Certains de ces prestataires sont établis hors de l’Espace économique européen ; les transferts sont encadrés par les clauses contractuelles types de la Commission européenne ou une autre garantie légale. Nous ne vendons jamais vos données.</p>
+    <h2>Cookies et stockage</h2>
+    <p>Nous n’utilisons pas de cookies de suivi ou publicitaires. Votre panier est enregistré dans votre propre navigateur (stockage local) afin qu’il soit toujours là à votre retour ; il ne quitte votre appareil qu’au moment du paiement. Sur sa page de paiement, Stripe utilise des cookies nécessaires au paiement sécurisé et à la prévention de la fraude.</p>
+    <h2>Vos droits</h2>
+    <p>Vous pouvez demander à consulter, rectifier ou effacer vos données, à en limiter l’usage ou à vous y opposer, et à les recevoir dans un format portable. Vous pouvez retirer à tout moment votre consentement à la newsletter. Écrivez à <span data-legal="email"></span> ; nous répondons dans un délai d’un mois.</p>
+    <p>Si vous n’êtes pas satisfait, vous pouvez introduire une plainte auprès de l’Autorité de protection des données via <a href="https://www.autoriteprotectiondonnees.be" rel="noopener">autoriteprotectiondonnees.be</a>.</p>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container legal-nav">
+      <a href="terms.html">Conditions générales</a>
+      <a href="returns.html">Retours &amp; rétractation</a>
+      <a href="shipping.html">Livraison</a>
+      <a href="privacy.html">Confidentialité</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="container footer-bottom muted">
+      <p class="legal-info" id="legalInfo"></p>
+      <p class="legal-info" id="vatNote"></p>
+      <p>© <span id="year"></span> Fourfold. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/legal.js"></script>
+</body>
+</html>
