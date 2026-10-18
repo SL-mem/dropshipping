@@ -1,6 +1,6 @@
 # Fourfold — year-round clothing store
 
-A static storefront for a seasonal clothing brand. It currently features the **Winter Edit**; spring, summer and fall are set up as "coming soon" collections.
+A static storefront for a seasonal clothing brand. It currently features the **Winter Edit** (clothing, heaters & warmers, winter tools), priced in euros for the Netherlands and Belgium; spring, summer and fall are set up as "coming soon" collections.
 
 No build step — open `index.html` or serve the folder:
 

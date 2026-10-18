@@ -17,6 +17,8 @@
     socks:
       '<path d="M36 12h26v50l22 14c9 6 6 22-6 22H52c-9 0-16-7-16-16Z"/><path d="M36 24h26M36 32h26" class="line"/>',
     basics: "Basics",
+    warmth: "Heaters & Warmers",
+    tools: "Winter Tools",
   };
 
   // Simple garment silhouettes used as product illustrations.
@@ -35,13 +37,25 @@
       '<path d="M34 80V46l-10-12c-3-4 2-9 6-6l6 6V20c0-4 6-4 6 0v-4c0-4 6-4 6 0v2c0-4 6-4 6 0v4c0-4 6-4 6 0v42c0 8-4 16-8 16Z"/><rect x="32" y="78" width="34" height="20" rx="3"/><path d="M36 84h26M36 90h26" class="line"/>',
     socks:
       '<path d="M36 12h26v50l22 14c9 6 6 22-6 22H52c-9 0-16-7-16-16Z"/><path d="M36 24h26M36 32h26" class="line"/>',
+    heater:
+      '<rect x="22" y="20" width="56" height="70" rx="10"/><path d="M32 40h36M32 50h36M32 60h36M32 70h36M32 80h36" class="line"/><circle cx="50" cy="30" r="3" class="dot"/><rect x="28" y="90" width="10" height="7" rx="2"/><rect x="62" y="90" width="10" height="7" rx="2"/>',
+    handwarmer:
+      '<rect x="30" y="16" width="40" height="78" rx="18"/><circle cx="50" cy="38" r="6" class="dot"/><path d="M40 60h20M40 68h20M40 76h20" class="line"/>',
+    scraper:
+      '<rect x="44" y="12" width="12" height="54" rx="6"/><path d="M24 66h52l-7 30H31Z"/><path d="M30 90h40" class="line"/>',
+    bottle:
+      '<rect x="42" y="10" width="16" height="16" rx="3"/><path d="M30 26h40c6 0 10 4 10 10v54c0 6-4 10-10 10H30c-6 0-10-4-10-10V36c0-6 4-10 10-10Z"/><path d="M28 48h44M28 60h44M28 72h44M28 84h44" class="line"/>',
+    blanket:
+      '<path d="M16 28h68v54c0 8-6 14-14 14H16Z"/><path d="M28 40h44M28 52h44M28 64h44M28 76h36" class="line"/><path d="M70 82c4 4 10 4 14 0" class="line"/>',
+    vest:
+      '<path d="M36 16 22 24c8 12 8 24 0 32v40h56V56c-8-8-8-20 0-32l-14-8c-4 10-24 10-28 0Z"/><path d="M50 26v70" class="line"/><path d="M30 62h12M58 62h12" class="line"/>',
     basics:
       '<path d="M36 18h28l22 12-8 16-10-4v54H32V42l-10 4-8-16Z"/><path d="M40 18c2 7 18 7 20 0" class="line"/>',
   };
 
   const $ = (sel) => document.querySelector(sel);
   const money = (n) =>
-    new Intl.NumberFormat("en-US", { style: "currency", currency: STORE.currency }).format(n);
+    new Intl.NumberFormat(STORE.locale, { style: "currency", currency: STORE.currency }).format(n);
 
   let activeCategory = "all";
   let cart = loadCart();

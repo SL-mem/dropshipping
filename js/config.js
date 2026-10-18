@@ -8,8 +8,9 @@
 const STORE = {
   name: "Fourfold",
   tagline: "Clothing for every season",
-  currency: "USD",
-  freeShippingThreshold: 75,
+  currency: "EUR",
+  locale: "en-IE",
+  freeShippingThreshold: 50,
 };
 
 const ACTIVE_SEASON = "winter";
@@ -20,9 +21,9 @@ const SEASONS = {
     status: "live",
     eyebrow: "The Winter Edit · 2026",
     headline: "Built for the cold. Made to be worn.",
-    copy: "Insulated coats, chunky knits and the accessories that get you through the darkest months — warm, durable and shipped to your door.",
+    copy: "Insulated coats, chunky knits, heaters and hand warmers — everything that gets you through the darkest months, shipped fast from EU warehouses.",
     cta: "Shop winter",
-    announcement: "Free shipping on orders over $75 · 30-day free returns",
+    announcement: "Free shipping over €50 · Fast delivery from EU warehouses · 30-day free returns",
     theme: { accent: "#2f5d8a", accentSoft: "#e3edf6", hero1: "#0f2236", hero2: "#2f5d8a" },
   },
   spring: {
